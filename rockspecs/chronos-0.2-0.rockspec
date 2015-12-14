@@ -5,7 +5,10 @@ build = {
 	type = "builtin",
 
 	modules = {
-		chronos = "src/chronos.c",
+		chronos = {
+			sources = { "src/chronos.c" },
+			libraries = { "rt" }
+		}
 	},
 }
 

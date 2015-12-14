@@ -19,7 +19,10 @@ description = {
 build = {
 
 	modules = {
-		chronos = "src/chronos.c",
+		chronos = {
+			sources = {"src/chronos.c"},
+			libraries = {"rt", "lua5.1"}
+		}
 	},
 	type = "builtin",
 }
